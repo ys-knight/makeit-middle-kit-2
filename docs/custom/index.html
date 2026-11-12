@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="코덱스에 말만 하면 내 깃허브에 비공개 키트가 생기고, 바꾸고 싶은 걸 말하면 코덱스가 고쳐 주는 '내 커스텀 키트' 안내서. 원본 키트는 그대로.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex">
+  <title>내 커스텀 키트 — 월부월백 중급반</title>
+  <link rel="stylesheet" href="../week3/style.css">
+  <style>
+    .gh{padding:18px;display:grid;gap:12px;font-size:16px;justify-items:start}
+    .gh .title{font-weight:800;font-size:18px;color:var(--ink)}
+    .gh .codes{display:flex;flex-wrap:wrap;gap:4px;align-items:center;font:700 19px/1 var(--mono);color:var(--ink)}
+    .gh .codes span{border:1px solid var(--line);border-radius:6px;padding:7px 5px;background:var(--box);min-width:14px;text-align:center}
+    .gh .btn{background:#1f883d;color:#fff;font-weight:700;border-radius:8px;padding:9px 16px}
+    .gh .btn.gray{background:var(--box);color:var(--ink);border:1px solid var(--line)}
+    .gh .perm{border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--muted);font-size:15px;width:100%;box-sizing:border-box}
+    .gh .perm b{color:var(--ink)}
+    .gh .hint{font-size:14px;color:var(--faint)}
+  </style>
+</head>
+<body>
+<a class="skip" href="#steps">순서로 바로가기</a>
+<main class="wrap">
+  <header>
+    <p class="eyebrow">월부월백 중급반 · 내 커스텀 키트</p>
+    <h1>말 한마디로<br>나만의 키트 만들기</h1>
+    <p>코덱스에 말하면 <b>내 깃허브에 비공개 키트</b>가 생기고, 바꾸고 싶은 걸 말하면 <b>코덱스가 고쳐 줘요</b>.<br><b>원래 키트는 그대로</b>라 언제든 돌아갈 수 있어요.</p>
+  </header>
+
+  <section class="prep" aria-labelledby="prep-title">
+    <h2 id="prep-title">먼저 챙길 것</h2>
+    <ul>
+      <li><b>1·2주차에 쓰던 작업 폴더</b> — 원본 키트 설치·키 설정이 끝난 그 폴더 그대로</li>
+      <li><b>깃허브 계정</b> — 없으면 <a href="https://github.com/signup">github.com</a> 에서 무료로 직접 가입하고, 가입 때 온 <b>이메일 인증(Verify)</b> 까지 해 두세요 (코덱스가 대신 가입하지 않아요)</li>
+      <li><b>크롬</b> — 깃허브 화면에서 코드 한 번 넣는 데만 씁니다</li>
+    </ul>
+  </section>
+  <aside class="note ok intro-note"><b>내 컴퓨터에는 아무것도 내려받지 않아요</b>키트 코드는 <b>내 깃허브(비공개)</b>에만 있고, 고치는 것도 코덱스가 깃허브에 바로 해요. 토큰 복사, 저장소 만들기, 코드 편집기 같은 건 하나도 없습니다.</aside>
+
+  <div class="steps" id="steps">
+    <section class="step" id="step-1" aria-labelledby="title-1">
+      <div class="num" aria-hidden="true">1</div><div class="body">
+        <h2 id="title-1">코덱스에 이 한 줄</h2>
+        <p>ChatGPT 앱 → <b>Codex</b> → 작업 폴더로 <b>1·2주차에 쓰던 폴더</b>를 고르고 말합니다.</p>
+        <div class="prompt"><p id="make-prompt">내 커스텀 키트 만들어줘</p><button type="button" data-copy="make-prompt">문장 복사</button></div>
+        <p>코덱스가 <b>깃허브 주소</b>와 <b>8자리 코드</b>를 알려 줍니다.</p>
+      </div>
+    </section>
+
+    <section class="step" id="step-2" aria-labelledby="title-2">
+      <div class="num" aria-hidden="true">2</div><div class="body">
+        <h2 id="title-2">깃허브에서 코드 넣고 Authorize</h2>
+        <p>크롬에서 <a href="https://github.com/login/device">github.com/login/device</a> 를 엽니다 (깃허브 로그인).</p>
+        <ol class="install-route">
+          <li>내 계정이 보이면 <b>Continue</b></li>
+          <li>코덱스가 준 8자리 코드를 넣고 <b>Continue</b></li>
+          <li>‘메킷 키트’ 승인 화면에서 초록 <b>Authorize</b> — 버튼은 몇 초 뒤에 눌려요</li>
+        </ol>
+        <div class="screen"><div class="bar"><span>github.com/login/device · 설명용 그림</span></div>
+          <div class="gh">
+            <span class="title">Authorize your device</span>
+            <div class="codes"><span>A</span><span>B</span><span>C</span><span>D</span>–<span>1</span><span>2</span><span>3</span><span>4</span></div>
+            <span class="btn">Continue</span>
+          </div>
+        </div>
+        <div class="screen"><div class="bar"><span>깃허브 승인 화면 · 설명용 그림</span></div>
+          <div class="gh">
+            <span class="title">Authorize 메킷 키트</span>
+            <div class="perm">⚠️ This authorization was requested from <b>(내 지역·IP)</b> … Make sure you trust this device — <b>지금 내 컴퓨터에서 요청한 것이라 괜찮아요</b></div>
+            <div class="perm"><b>메킷 키트 by makeit-edu</b> wants to access your account<br><b>Repositories</b> — Public and private</div>
+            <span class="btn">Authorize makeit-edu</span>
+            <span class="hint">‘Cancel’ 을 누르면 연결되지 않아요.</span>
+          </div>
+          <div class="screen-caption">화면 모양·글자는 깃허브가 바꿀 수 있어요.</div>
+        </div>
+        <aside class="note stop"><b>승인 화면은 새로고침하지 마세요</b>새로고침하면 ‘Page not found’ 로 바뀌어요. 그러면 코덱스에 “다시 해줘” 라고 하면 새 코드를 줘요.</aside>
+        <aside class="note warn"><b>왜 ‘저장소 접근’ 을 묻나요?</b>비공개 키트를 내 깃허브에 만들고, “바꿔줘” 한 것을 고쳐 넣으려면 깃허브에서는 이 권한이 필요해요. 키트는 내가 시킨 일만 합니다. 언제든 끊을 수 있어요 (아래 ‘막혔을 때’).</aside>
+      </div>
+    </section>
+
+    <section class="step" id="step-3" aria-labelledby="title-3">
+      <div class="num" aria-hidden="true">3</div><div class="body">
+        <h2 id="title-3">코덱스에 “했어요” — 끝</h2>
+        <div class="screen"><div class="bar"><span>코덱스 채팅 · 설명용 그림</span></div>
+          <div class="conversation">
+            <p class="you">내 커스텀 키트 만들어줘</p>
+            <p class="codex">내 깃허브에 연결할게요. 크롬에서 github.com/login/device 를 열고 코드 ABCD-1234 를 넣은 뒤 Authorize 를 눌러 주세요.</p>
+            <p class="you">했어요</p>
+            <p class="codex">다 됐어요! 내 깃허브에 비공개 키트를 만들고, 이 폴더를 내 키트로 바꿨어요.</p>
+          </div>
+        </div>
+        <p>내 깃허브에 비공개 저장소 <span class="path">my-makeit-kit</span> 가 생기고, <b>지금 이 폴더</b>가 내 키트로 돌아요. 평소처럼 <span class="type">승인글 자동화 시작해</span> · <span class="type">네이버 글 써줘</span> 라고 하면 됩니다.</p>
+      </div>
+    </section>
+
+    <section class="step" id="step-4" aria-labelledby="title-4">
+      <div class="num" aria-hidden="true">4</div><div class="body">
+        <h2 id="title-4">바꾸고 싶은 걸 말하기</h2>
+        <p>같은 채팅에서 <b>“내 키트에서 ○○ 바꿔줘”</b> 라고 말하면 코덱스가 고치고, <b>바로 다음 실행부터</b> 바뀐 대로 돌아요.</p>
+        <div class="prompt"><p id="change-prompt">내 키트에서 네이버 글 마무리 문단 끝에 "이웃 추가하시면 새 글을 바로 받아 보실 수 있어요" 한 문장을 늘 넣어줘</p><button type="button" data-copy="change-prompt">예시 문장 복사</button></div>
+        <div class="cmds examples"><div class="cmd"><b>말투</b><span>내 키트에서 승인글 말투를 조금 더 친근하게 바꿔줘</span></div><div class="cmd"><b>형식</b><span>내 키트에서 네이버 글 소제목을 4개로 맞춰줘</span></div><div class="cmd"><b>모르겠으면</b><span>내 키트에서 바꿀 만한 것 세 가지를 쉽게 제안해줘. 아직 고치지 마</span></div></div>
+        <aside class="note ok"><b>마음에 안 들면</b><span class="type">방금 바꾼 거 되돌려줘</span> — 바로 전으로 돌아가요. 여러 번 말하면 계속 되돌려요. <span class="type">내 키트 바꾼 기록 보여줘</span> 로 지금까지 바꾼 것도 볼 수 있어요.</aside>
+        <aside class="note stop"><b>키·비밀번호는 말하지 마세요</b>OpenAI 키·워드프레스 비밀번호는 지금처럼 키 설정으로만 넣어요. 키트에 넣으려고 하면 코덱스가 막습니다.</aside>
+      </div>
+    </section>
+
+    <section class="step" id="step-5" aria-labelledby="title-5">
+      <div class="num" aria-hidden="true">5</div><div class="body">
+        <h2 id="title-5">원본 ↔ 내 키트</h2>
+        <div class="file-flow" aria-label="한 폴더에서 원본 키트와 내 키트를 바꿔 씁니다"><div><span class="file-tag">원본</span><b>원본 키트로 써줘</b><small>강의에서 받은 그대로</small></div><span class="arrow" aria-hidden="true">⇄</span><div><span class="file-tag blue">내 것</span><b>내 키트로 써줘</b><small>내가 바꾼 키트</small></div></div>
+        <p>폴더는 그대로, 말 한마디로 바꿔요. 깃허브 연결과 내 키트는 그대로 남아 있어서 언제든 돌아올 수 있어요.</p>
+      </div>
+    </section>
+  </div>
+
+  <section class="tail" aria-labelledby="commands-title">
+    <h2 id="commands-title">코덱스에게 하는 말</h2>
+    <div class="cmds"><div class="cmd"><b>내 커스텀 키트 만들어줘</b><span>처음 한 번 (1~3번)</span></div><div class="cmd"><b>내 키트에서 ○○ 바꿔줘</b><span>바꾸고 싶을 때마다</span></div><div class="cmd"><b>방금 바꾼 거 되돌려줘</b><span>바로 전으로</span></div><div class="cmd"><b>원본 키트로 써줘 / 내 키트로 써줘</b><span>바꿔 쓰기</span></div><div class="cmd"><b>내 키트 바꾼 기록 보여줘</b><span>지금까지 바꾼 것</span></div></div>
+    <h2>막혔을 때</h2>
+    <div class="cmds">
+      <div class="cmd"><b>“아직 승인이 안 됐어요”</b><span>깃허브 화면에서 코드를 넣고 초록 <b>Authorize</b> 까지 눌렀는지 확인하고 다시 “했어요”.</span></div>
+      <div class="cmd"><b>승인 화면이 ‘Page not found’ 예요</b><span>새로고침하면 그래요. 코덱스에 “다시 해줘” 라고 하면 새 코드를 줘요.</span></div>
+      <div class="cmd"><b>“코드 시간이 지났어요”</b><span>코덱스가 새 코드를 줘요. 15분 안에 넣으면 됩니다.</span></div>
+      <div class="cmd"><b>“깃허브 연결이 끊겼어요”</b><span><span class="type">내 커스텀 키트 만들어줘</span> 라고 하면 다시 연결돼요. 내 키트는 깃허브에 그대로 있어요. 급하면 <span class="type">원본 키트로 써줘</span>.</span></div>
+      <div class="cmd"><b>바꾼 뒤 이상해요</b><span><span class="type">방금 바꾼 거 되돌려줘</span>. 원본 키트로 같은 일이 잘 되면 내가 바꾼 부분 때문이에요.</span></div>
+      <div class="cmd"><b>내 키트를 깃허브에서 보고 싶어요</b><span>github.com/내아이디/my-makeit-kit (나만 볼 수 있어요)</span></div>
+      <div class="cmd"><b>연결을 끊고 싶어요</b><span>깃허브 → Settings → Applications → Authorized OAuth Apps → <b>메킷 키트</b> → Revoke. 그 뒤엔 원본 키트로 쓰면 돼요.</span></div>
+    </div>
+
+    <aside class="note ok"><b>촬영할 때</b>이 방식은 토큰 같은 비밀값이 화면에 나오지 않아요. 8자리 코드는 15분짜리 한 번용이라 찍혀도 괜찮습니다. 다만 깃허브 아이디·저장소 이름이 보이니 <b>촬영용 깃허브 계정</b>을 쓰면 좋아요.</aside>
+
+    <details class="teacher"><summary>강사용 — 어떻게 도는지 · 주의할 점 · 검증 범위</summary>
+      <p><b>어떻게 도는지.</b> ‘내 커스텀 키트 만들어줘’ → makeit-edu 의 깃허브 OAuth 앱 ‘메킷 키트’ 로 디바이스 로그인(권한 repo) → 키트가 원본 템플릿에서 수강생 계정에 비공개 저장소 <span class="path">my-makeit-kit</span> 를 만들고(POST …/generate), 같은 작업 폴더의 <span class="path">애드센스 승인글/00_설정</span> 에 표시(키트저장소.txt)·연결 정보(내키트.json)·연결 토큰(깃허브토큰.txt, 권한 600)을 둡니다. 그 폴더는 실행할 때마다 내 키트 main 의 최신 커밋을 받아 씁니다. ‘내 키트에서 ○○ 바꿔줘’ → 코덱스가 파일을 읽고 바꿀 곳을 주면 키트가 검사(JSON·불러오기·비밀값·대본 필수 줄)한 뒤 깃허브에 한 커밋으로 올립니다. 되돌리기는 직전 커밋 이전 상태로 새 커밋. 내 키트로 돌 때도 만들기·고치기·설치 부품은 늘 원본 것이 돌고, 원본 키트 요청에는 토큰을 붙이지 않습니다. 전역 ~/.codex/AGENTS.md 는 원본 그대로.</p>
+      <p><b>주의.</b> ① 원본 목록.json 의 <b>정지 스위치로 수강생 키트는 멈출 수 없습니다</b> — 각자 사본입니다. ② 원본이 좋아져도 내 키트에는 자동으로 안 들어갑니다(원본 키트로 써줘, 또는 ‘원본에 새로 나온 ○○ 내 키트에도 넣어줘’). ③ 깃허브 OAuth 의 비공개 저장소 권한은 ‘repo’(그 계정의 모든 저장소) 하나뿐입니다. 키트 코드는 시킨 일만 하고, 수강생은 언제든 Revoke 할 수 있습니다. ④ 수강생 PC 에 코드를 내려받지 않습니다(검사용 임시 폴더는 바로 지움).</p>
+      <p id="verify"><b>검증 범위 (2026-10-19).</b> 진짜 ‘메킷 키트’ 앱(Client ID Ov23li5t03Wk3mgpq0BA)으로 디바이스 로그인 실측 7개 항목 통과(코드 발급 → Authorize → 연결·토큰 저장(repo) → 내 키트로 실행 → 고치기 → 되돌리기). 같은 종류의 토큰으로 37개 항목 통과: 비공개 저장소 자동 생성(템플릿에서)·다시 연결 시 재사용, 같은 폴더 전환(원본↔내 키트), 고치기(찾아 바꾸기·새 파일 목록 자동 등록)와 막기(못 찾음·로더·실제 키 값·문법 깨짐·대본 필수 줄·목록 지우기, 실패 시 커밋 없음), 되돌리기·바꾼 기록, 관리 부품 원본 덮기, 연결 끊김 안내와 다시 연결, 원본 요청에 토큰 안 붙음.</p>
+      <p><a href="https://github.com/makeit-edu/makeit-middle-kit">원본 저장소</a></p>
+    </details>
+  </section>
+  <footer>메킷 키트 · 월부월백 중급반 · 내 커스텀 키트</footer>
+</main>
+<div id="notice" role="status" aria-live="polite"></div>
+<script>
+(() => {
+  const notice = document.getElementById('notice');
+  let timer;
+  const announce = (message) => {
+    notice.textContent = message;
+    notice.classList.add('visible');
+    clearTimeout(timer);
+    timer = setTimeout(() => notice.classList.remove('visible'), 3500);
+  };
+  document.querySelectorAll('[data-copy]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const target = document.getElementById(button.dataset.copy);
+      try {
+        await navigator.clipboard.writeText(target.textContent.trim());
+        announce('복사했어요. 코덱스 채팅창에 붙여넣으세요.');
+      } catch {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(target);
+        selection.removeAllRanges();
+        selection.addRange(range);
+        announce('문장을 선택했어요. 직접 복사해 주세요.');
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
